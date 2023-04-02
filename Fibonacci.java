@@ -5,18 +5,18 @@ import java.util.Scanner;
 public class Fibonacci {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.print("Eleman sayısını giriniz: ");
-        int n = input.nextInt();
-        int total,x=0,y=1;
+        System.out.print("Fibonacci serisi kaç sayı olsun? ");
+        int sayiAdedi = input.nextInt();
 
-        for (int i = 1; i < n; i++) {
-            System.out.println(x);
-            total=x+y;
-            x=y;
-            y=total;
+        int ilkSayi = 0, ikinciSayi = 1;
+        System.out.print(ilkSayi + " " + ikinciSayi);
 
+        for(int i = 2; i < sayiAdedi; i++) {
+            int sonrakiSayi = ilkSayi + ikinciSayi;
+            System.out.print(" " + sonrakiSayi);
+            ilkSayi = ikinciSayi;
+            ikinciSayi = sonrakiSayi;
         }
-
 
     }
 }
